@@ -1,5 +1,12 @@
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
+import os
+
+# تحميل المتغيرات من ملف .env
+load_dotenv()
+
+TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -15,5 +22,4 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send(f'Hello {ctx.author.mention}!')
 
-# استبدل 'YOUR_BOT_TOKEN' بتوكن البوت بتاعك
-bot.run('MTM2MDQxODMzOTc4NDIzMjk2MA.GYpjU7.BaoloGut9fgUVAag-mpgL4IvX0wKR-jW0M0IAw')
+bot.run(TOKEN)
