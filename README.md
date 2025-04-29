@@ -1,2 +1,2 @@
-# my-discord-bot
+# discord-bot
 My Discord bot project
